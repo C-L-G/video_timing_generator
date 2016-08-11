@@ -4,7 +4,7 @@ ______________ \  /\  /|\  /| ______________
 ______________  \/  \/ | \/ | ______________
 --Module Name:  video_generator_tb.sv
 --Project Name: video_timming_generator
---Data modified: 2015-09-30 16:32:09 +0800
+--Data modified: 2016-08-10 09:20:28 +0800
 --author:Young-ÎâÃ÷
 --E-mail: wmy367@Gmail.com
 ****************************************/
