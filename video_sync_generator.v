@@ -31,7 +31,7 @@ HS   : ........__/ \___/ \..___....../ \___/ \___/ \___.....
 FIELD:........./                                              \_____
 
 */
-`include "video_sync_parameter.v"
+`include "video_sync_parameter.vh"
 
 //----->> H SYNC <<------------------------
 reg [12:0]		Hcnt;
