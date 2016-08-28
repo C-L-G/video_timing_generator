@@ -5,7 +5,7 @@ ______________  \/  \/ | \/ | ______________
 --Module Name:  video_sync_generator_B2.v
 --Project Name: video_timming_generator
 --Data modified: 2016-08-10 09:20:28 +0800
---author:Young-ÎâÃ÷
+--author:Young-ï¿½ï¿½ï¿½ï¿½
 --E-mail: wmy367@Gmail.com
 ****************************************/
 `timescale 1ns/1ps
@@ -305,6 +305,24 @@ assign			V_ODD_BLANK		= 38       	;
 assign			V_EVEN_BLANK	= 0        	;
 assign			NEGATED			= 1;
 assign			INTERLACE		= 0;
+end else if(MODE == "TEST")begin
+assign			H_ACTIVE		= 1920 		;
+assign			H_TOTAL			= 2200     	;
+assign			H_SYNC			= 44       	;
+assign			H_FP			= 88       	;
+assign			H_BLANK			= 280      	;
+assign			V_TOTAL			= 25		;
+assign			V_ACTIVE		= 20     	;
+assign			V_SYNC			= 1        	;
+assign			V_ODD_FP		= 1        	;
+assign			V_EVEN_FP		= 1       	;
+assign			V_ODD_OFFSET_RE = 1       	;
+assign			V_ODD_OFFSET_FE = 0			;
+assign			V_EVEN_OFFSET_RE= 1      	;
+assign			V_EVEN_OFFSET_FE= 0			;
+assign			V_ODD_BLANK		= 5       	;
+assign			V_EVEN_BLANK	= 0        	;
+assign			NEGATED			= 0;
 end
 endgenerate
 
