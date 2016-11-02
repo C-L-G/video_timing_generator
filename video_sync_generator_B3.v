@@ -4,12 +4,12 @@ ______________ \  /\  /|\  /| ______________
 ______________  \/  \/ | \/ | ______________
 --Module Name:  video_sync_generator_B2.v
 --Project Name: video_timming_generator
---Data modified: 2016-08-10 09:20:28 +0800
+--Data modified: 2016/10/28 上午11:21:18
 --author:Young
 --E-mail: wmy367@Gmail.com
 ****************************************/
 `timescale 1ns/1ps
-module video_sync_generator_B2 #(
+module video_sync_generator_B3 #(
 	parameter	MODE	= "1080P@60"
 )(
 	input				pclk 		,
@@ -22,7 +22,9 @@ module video_sync_generator_B2 #(
 	output				de          ,
 	output				field       ,
     output              ng_vs       ,
-    output              ng_hs
+    output              ng_hs       ,
+    output[15:0]        vactive     ,
+    output[15:0]        hactive
 );
 /*             |-> start ->>>
           _____                                _______      __
@@ -520,5 +522,7 @@ assign	field	= y_reg;
 assign ng_hs    = h_reg;    // :2016/5/17 下午3:20:18
 assign ng_vs    = v_reg;
 
+assign vactive  = V_ACTIVE;
+assign hactive  = H_ACTIVE;
 
 endmodule
